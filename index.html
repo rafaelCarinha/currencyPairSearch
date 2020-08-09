@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Search Currency by Date/Time</title>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <!-- Datepicker.css -->
+      <link rel="stylesheet" href="datepicker.css">
+      <!-- Datepicker.js -->
+      <script src="datepicker.js"></script>
+      <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/styles.css">
+      
+</head>
+
+<body>
+    <div class="register-photo">
+        <div class="form-container">
+              <div class="form-group text-center" style="padding: 100px;width: 400px;margin: auto;height: 400px;">
+              <h5>Search currency pair:</h5>
+              <input class="d-inline-block" type="text" style="margin: 10px;" placeholder="Select Start Date" id="datepicker" name="datepicker" autocomplete="off">
+              <input class="" type="text" style="margin: 10px;" placeholder="Select Start Time" id="time" name="time" autocomplete="off" value="13:00:00">
+              <input class="d-inline-block" type="text" style="margin: 10px;" placeholder="Select End Date" id="datepickerEnd" name="datepickerEnd" autocomplete="off">
+              <input class="" type="text" style="margin: 10px;" placeholder="Select End Time" id="endTime" name="endTime" autocomplete="off" value="13:10:00">
+              <select id = "currencyPair"
+                  class="d-inline-block" style="margin: 10px;">
+                  <optgroup label="This is a group">
+                      <option value="EURUSD" selected="">EURUSD</option>
+                      <option value="USDJPY">USDJPY</option>
+                      <option value="USDCAD">USDCAD</option>
+                  </optgroup>
+                  </select>
+                  <select id = "quantity" class="d-inline-block" style="margin: 10px;">
+                    <optgroup label="This is a group">
+                    <option value="5" selected="">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                  </optgroup>
+                </select>
+                  <div style="height: 50px;">
+                    <button class="btn btn-primary" type="button" onclick="handleSubmit();">Submit
+                    </button>
+                  </div>
+          </div>
+          <div class="form-group text-center" style="padding-top: 100px">
+            <div id="chart_div"></div>
+          </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="control.js"></script>
+</html>
